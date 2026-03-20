@@ -1,4 +1,3 @@
-from load_image import ft_load
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -10,7 +9,7 @@ def ft_invert(array) -> np.array:
     """
     img = 255 - array
     Image.fromarray(img).show()
- 
+
 
 def ft_red(array):
     """
