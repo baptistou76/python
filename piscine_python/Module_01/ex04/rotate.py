@@ -2,7 +2,15 @@ from load_image import ft_load
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def main():
+    """
+    The function takes the image 'animal.jpeg' linked to the subject,
+    call the ft_load function to display the shape and pixel content.
+    The main program will make a 400 x 400 cutting on the image, transpose
+    the x and y axis to rotate the image, display the new shape and show
+    the result.
+    """
     try:
         path = "animal.jpeg"
         img = ft_load(path)
@@ -42,6 +50,6 @@ def main():
         print("Error:", e)
         return None
 
-    
+
 if __name__ == "__main__":
     main()
