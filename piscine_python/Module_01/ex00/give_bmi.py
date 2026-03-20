@@ -1,7 +1,10 @@
 import numpy as np
 
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(
+    height: list[int | float],
+    weight: list[int | float]
+) -> list[int | float]:
     """
     Check if the values are int or float and calculate the bmi.
     Return a bmi array
