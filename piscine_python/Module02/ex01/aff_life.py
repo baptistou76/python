@@ -3,6 +3,13 @@ import matplotlib.pyplot as plt
 
 
 def main():
+    """
+    Main program that uses the load function from the
+    previous exercise to open the life_expectancy.csv file,
+    extracts the DataFrame, creates a graph, and use the
+    matplotlib to displays it with a title and legends for
+    the X and Y axes.
+    """
     try:
         df = load("life_expectancy_years.csv")
         if df is None:
@@ -16,6 +23,7 @@ def main():
         plt.xlabel("Year")
         plt.xticks(years[::40])
         plt.ylabel("Life expectancy")
+        plt.tight_layout()
         plt.show()
     except Exception as e:
         print("Error:", e)

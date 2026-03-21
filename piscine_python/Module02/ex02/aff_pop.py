@@ -4,6 +4,10 @@ from matplotlib.ticker import MultipleLocator, FuncFormatter
 
 
 def conv_pop(value):
+    """
+    Convert a value from a string to float.
+    Exemple: 1k becomes 1000.
+    """
     value = str(value)
     if "B" in value:
         return float(value.replace("B", "")) * 1e9
@@ -15,6 +19,12 @@ def conv_pop(value):
 
 
 def main():
+    """
+    The main programme opens the life_expectancy.csv file and
+    extracts the DataFrame from it to create a graph with the
+    matplotlib. The graph comparate your campus's country and
+    one of your choice.
+    """
     try:
         df = load("population_total.csv")
         if df is None:
@@ -39,6 +49,7 @@ def main():
         ax = plt.gca()
         ax.yaxis.set_major_locator(MultipleLocator(20))
         ax.yaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{int(x)}M"))
+        plt.tight_layout()
         plt.show()
     except Exception as e:
         print("Error:", e)

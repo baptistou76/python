@@ -2,6 +2,10 @@ import pandas as pd
 
 
 def load(path: str) -> pd.DataFrame | None:
+    """
+    This function opens a csv file, check its validity,
+    displays its shape and content, and return a pandas.DataFrame
+    """
     try:
         if not isinstance(path, str):
             print("Error: Path must be a string")
