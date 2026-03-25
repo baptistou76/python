@@ -7,6 +7,9 @@ def give_bmi(
 ) -> list[int | float]:
     """
     Check if the values are int or float and calculate the bmi.
+    Args:
+        Height: a list contains int or float.
+        Weight: a list contains int or float.
     Return a bmi array
     """
     if len(height) != len(weight):

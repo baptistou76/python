@@ -24,7 +24,7 @@ def pow(x: int | float) -> int | float:
 def outer(x: int | float, function) -> object:
     """
     Create a closure repeatedly applies a function a value.
-    The returned function ('inner') keeps the value 'x' in 
+    The returned function ('inner') keeps the value 'x' in
     memory and, each time it is called, applies the given
     function to the current value of 'x'.
     Args:
@@ -36,6 +36,7 @@ def outer(x: int | float, function) -> object:
         updated result.
     """
     count = 0
+
     def inner() -> float:
         nonlocal x
         nonlocal count
