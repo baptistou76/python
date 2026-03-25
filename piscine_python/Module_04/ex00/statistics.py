@@ -2,6 +2,22 @@ from typing import Any
 
 
 def ft_statistics(*args: Any, **kwargs: Any) -> None:
+    """
+    The function accepts any numbers of positionnal
+    arguments representing numeric values. It calculates
+    statistics depending on the keyword arguments provided.
+    Supported keywords values:
+    -"mean"     : average of numbers
+    -"median"   : middle value of the sorted numbers
+    -"quartile" : first and third quartiles
+    -"var"      : variance
+    -"std"      : standard deviation
+    Args:
+        *args (Any): A variable number of numeric values
+        **kwargs(Any): keywords specifying wich statistics to displays.
+    Returns:
+        None
+    """
     if not args:
         print("ERROR")
         return None

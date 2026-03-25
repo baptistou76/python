@@ -1,4 +1,14 @@
 def NULL_not_found(object: any) -> int:
+    """
+    Identify and print the NULL type of a given object.
+    Args:
+        object (any): Object to identified.
+    Returns:
+        int: Return '0' if the object was identified.
+        int: Return '1' in case of unknown NULL type.
+    Prints:
+        Prints the NULL type of the object.
+    """
     if object is None:
         print("Nothing:", object, type(object))
     elif isinstance(object, float) and object != object:
